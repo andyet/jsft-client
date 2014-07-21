@@ -9,7 +9,7 @@ module.exports = Model.extend({
             }
         };
     },
-    initialize: function (attrs) {
+    initialize: function () {
         var self = this;
         if (localStorage.wolvesAccessToken) {
             this.accessToken = localStorage.wolvesAccessToken;

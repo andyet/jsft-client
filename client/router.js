@@ -8,7 +8,7 @@ var querystring = require('querystring');
 
 function triggerPage(PageConstructor) {
     return function (params) {
-        this.trigger('newPage', new PageConstructor());
+        this.trigger('newPage', new PageConstructor(params));
     };
 }
 

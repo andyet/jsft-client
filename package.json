@@ -18,7 +18,10 @@
     "stylizer": "^0.7.0",
     "templatizer": "^0.3.6"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "jshint": "^2.4.4",
+    "precommit-hook": "^1.0.3"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
