@@ -1,3 +1,4 @@
 div.well
   p= model.content
-  p= model.timeAgo
+  p
+    a(href=model.pageUrl)= model.timeAgo

@@ -25,7 +25,7 @@
         var jade_interp;
         var locals_for_with = locals || {};
         (function(model) {
-            buf.push('<div class="well"><p>' + jade.escape(null == (jade_interp = model.content) ? "" : jade_interp) + "</p><p>" + jade.escape(null == (jade_interp = model.timeAgo) ? "" : jade_interp) + "</p></div>");
+            buf.push('<div class="well"><p>' + jade.escape(null == (jade_interp = model.content) ? "" : jade_interp) + "</p><p><a" + jade.attr("href", model.pageUrl, true, false) + ">" + jade.escape(null == (jade_interp = model.timeAgo) ? "" : jade_interp) + "</a></p></div>");
         })("model" in locals_for_with ? locals_for_with.model : typeof model !== "undefined" ? model : undefined);
         return buf.join("");
     };
