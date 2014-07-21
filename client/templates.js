@@ -15,7 +15,7 @@
 
     // body.jade compiled template
     templatizer["body"] = function tmpl_body() {
-        return '<div><nav class="pure-menu pure-menu-open pure-menu-horizontal"><a href="#" class="pure-menu-heading">Wolves.Technology</a><ul><li><a href="/">Den</a></li><li><a href="/howls">Howls</a></li><li><a href="/marks">Marks</a></li><li><a href="/wolves">Wolves</a></li></ul></nav><div role="page"></div></div>';
+        return '<div><nav role="navigation" class="navbar navbar-default navbar-fixed-top"><div class="container-fluid"><div class="navbar-header"><button type="button" data-toggle="collapse" data-target="#navbar-collapse" class="navbar-toggle"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand">Wolves.Technology</a></div><div id="navbar-collapse" class="collapse navbar-collapse"><ul class="nav navbar-nav"><li><a href="/">Den</a></li><li><a href="/howls">Howls</a></li><li><a href="/marks">Marks</a></li><li><a href="/wolves">Wolves</a></li></ul></div></div></nav><div role="page"></div></div>';
     };
 
     // includes/howl.jade compiled template
@@ -25,14 +25,14 @@
         var jade_interp;
         var locals_for_with = locals || {};
         (function(model) {
-            buf.push("<div><p>" + jade.escape(null == (jade_interp = model.content) ? "" : jade_interp) + "</p><p>" + jade.escape(null == (jade_interp = model.createdAt) ? "" : jade_interp) + "</p></div>");
+            buf.push('<div class="well"><p>' + jade.escape(null == (jade_interp = model.content) ? "" : jade_interp) + "</p><p>" + jade.escape(null == (jade_interp = model.createdAt) ? "" : jade_interp) + "</p></div>");
         })("model" in locals_for_with ? locals_for_with.model : typeof model !== "undefined" ? model : undefined);
         return buf.join("");
     };
 
     // includes/main-nav.jade compiled template
     templatizer["includes"]["main-nav"] = function tmpl_includes_main_nav() {
-        return '<nav class="pure-menu pure-menu-open pure-menu-horizontal"><a href="#" class="pure-menu-heading">Wolves.Technology</a><ul><li><a href="/">Den</a></li><li><a href="/howls">Howls</a></li><li><a href="/marks">Marks</a></li><li><a href="/wolves">Wolves</a></li></ul></nav>';
+        return '<nav role="navigation" class="navbar navbar-default navbar-fixed-top"><div class="container-fluid"><div class="navbar-header"><button type="button" data-toggle="collapse" data-target="#navbar-collapse" class="navbar-toggle"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand">Wolves.Technology</a></div><div id="navbar-collapse" class="collapse navbar-collapse"><ul class="nav navbar-nav"><li><a href="/">Den</a></li><li><a href="/howls">Howls</a></li><li><a href="/marks">Marks</a></li><li><a href="/wolves">Wolves</a></li></ul></div></div></nav>';
     };
 
     // includes/wolf.jade compiled template
